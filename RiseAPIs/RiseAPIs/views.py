@@ -9,18 +9,6 @@ import urllib2
 import json
 import time
 
-@app.route('/test')
-def api1():
-    numdays = 3
-    base = datetime.datetime.today()
-    date_list = [base - datetime.timedelta(days=x) for x in range(0, numdays)]
-    data = list()
-    for value in date_list:
-        #response = requests.get("http://api.fixer.io/"+str(value)+"?base=GBP&symbols=USD,INR,EUR")
-        #data.append(response.text)
-        #time.sleep(1)
-        print value
-    return data
 @app.route('/')
 def api():
     #Output
